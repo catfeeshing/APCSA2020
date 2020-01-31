@@ -2,10 +2,10 @@ package Unit0;
 //(c) A+ Computer Science
 //www.apluscompsci.com
 
-//Name -
-//Date -
-//Class -
-//Lab  -
+//Name - Carolyn Cui
+//Date - 1/31/20
+//Class - P2 AP CS A
+//Lab  - Unit0 Input
 
 import static java.lang.System.*;
 import java.util.Scanner;

@@ -4,7 +4,7 @@ package Unit0;
 
 //Name - Carolyn Cui
 //Date - 1/30/20
-//Class - AP CS A P2
+//Class - P2 AP CS A
 //Lab  - Unit0 AsciiBox
 
 public class AsciiBox
