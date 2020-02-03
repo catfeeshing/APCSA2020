@@ -45,7 +45,7 @@ public class Variables
 		System.out.println("*8 bit - byteOne = "+byteOne+"\t\t*");
 		System.out.println("16 bit - shortOne = " + shortOne + "\t\t*");
 		System.out.println("32 bit - intOne = " + intOne + "\t\t*");
-		System.out.println("16 bit - longOne = " + longOne + "\t\t*");
+		System.out.println("16 bit - longOne = " + longOne + "\t*\n");
 
 		
 		
@@ -54,8 +54,8 @@ public class Variables
 		System.out.println("*        decimal types          *");
 		System.out.println("*                               *");
 
-		System.out.println("32 bit - floatOne = " + floatOne + "\t\t*");
-		System.out.println("64 bit - doubleOne" + doubleOne + "\t\t*");
+		System.out.println("32 bit - floatOne = " + floatOne + "\t*");
+		System.out.println("64 bit - doubleOne = " + doubleOne + "\t\t*\n");
 
 		
 		
@@ -64,7 +64,7 @@ public class Variables
 		System.out.println("*       other int types         *");
 		System.out.println("*                               *");
 		
-		System.out.println("16 bit - charOne = " + charOne + "\t\t*");
+		System.out.println("16 bit - charOne = " + charOne + "\t\t*\n");
 
 		
 		
@@ -74,7 +74,7 @@ public class Variables
 		System.out.println("*                               *");
 
 		System.out.println("booleanOne = " + boolOne + "\t\t*");
-		System.out.println("stringOne = " + str + "\t\t*");
+		System.out.println("stringOne = " + str + "\t\t\t*");
 
 	}
 }
