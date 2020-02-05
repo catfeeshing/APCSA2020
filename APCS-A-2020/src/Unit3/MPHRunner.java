@@ -1,3 +1,4 @@
+package Unit3;
 //(c) A+ Computer Science
 //www.apluscompsci.com
 
@@ -15,17 +16,24 @@ public class MPHRunner
 	public static void main( String[] args )
 	{
 		Scanner keyboard = new Scanner(in);
+		
+		MilesPerHour test = new MilesPerHour();
 
-		out.print("Enter the distance :: ");
+		// sample tests
+		
+		// 45 0 32
+		
+		System.out.print("Enter the distance :: ");
 		int dist = keyboard.nextInt();
 
-		out.print("Enter the hours :: ");
+		System.out.print("Enter the hours :: ");
 		int hrs = keyboard.nextInt();
 
-		out.print("Enter the minutes :: ");
+		System.out.print("Enter the minutes :: ");
 		int mins = keyboard.nextInt();
 
-		MilesPerHour test = new MilesPerHour(dist, hrs, mins);
+		
+		test.setNums(dist, hrs, mins);
 		test.calcMPH();
 		test.print();
 		
