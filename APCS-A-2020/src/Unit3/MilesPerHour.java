@@ -2,10 +2,10 @@ package Unit3;
 //(c) A+ Computer Science
 //www.apluscompsci.com
 
-//Name -
-//Date -
-//Class -
-//Lab  -
+//Name - Carolyn Cui
+//Date - 2/5/20
+//Class - AP CS A
+//Lab  - MPH / class
 
 import java.util.Scanner; 
 import static java.lang.System.*;
@@ -13,7 +13,7 @@ import static java.lang.Math.*;
 
 public class MilesPerHour
 {
-	private double distance, hours, minutes;
+	private double distance, hours, minutes, origHours;
 	private double mph;
 
 	public MilesPerHour()
@@ -37,13 +37,14 @@ public class MilesPerHour
 	public void setNums(int dist, int hrs, int mins)
 	{
 		distance = dist;
+		origHours = hrs;
 		hours = hrs;
 		minutes = mins;
 	}
 
 	public void calcMPH()
 	{
-		hours = minutes / 60;
+		hours = hours + (minutes / 60);
 		mph = (distance / hours);
 	}
 
@@ -57,6 +58,7 @@ public class MilesPerHour
 	public String toString()
 	{
 		String mphs = String.format("%.0f", mph);
-		return "The average miles per hour in " + hours + " hours and " + distance + " miles is " + mphs;
+		String hrs = String.format("%.2f", origHours);
+		return "The average miles per hour in " + hrs + " hours " + minutes + " minutes and " + distance + " miles is " + mphs;
 	}
 }

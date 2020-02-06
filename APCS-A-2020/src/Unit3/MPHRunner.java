@@ -2,10 +2,10 @@ package Unit3;
 //(c) A+ Computer Science
 //www.apluscompsci.com
 
-//Name -
-//Date -
-//Class -
-//Lab  -
+//Name - Carolyn Cui
+//Date - 2/5/20
+//Class - AP CS A
+//Lab  - MPH / Runner
 
 import java.util.Scanner; 
 import static java.lang.System.*;
@@ -35,10 +35,41 @@ public class MPHRunner
 		
 		test.setNums(dist, hrs, mins);
 		test.calcMPH();
+		System.out.println(test);
 		test.print();
 		
-		//add more test cases
+		// 96 1 43
 		
+		dist = 96;
+		hrs = 1;
+		mins = 43;
+		
+		test.setNums(dist, hrs, mins);
+		test.calcMPH();
+		System.out.println(test);
+		test.print();
+		
+		// 100 2 25
+		
+		dist = 100;
+		hrs = 2;
+		mins = 25;
+		
+		test.setNums(dist, hrs, mins);
+		test.calcMPH();
+		System.out.println(test);
+		test.print();
+		
+		// 50 2 25
+		
+		dist = 50;
+		hrs = 2;
+		mins = 25;
+		
+		test.setNums(dist, hrs, mins);
+		test.calcMPH();
+		System.out.println(test);
+		test.print();
 		
 	}
 }

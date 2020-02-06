@@ -2,10 +2,10 @@ package Unit3;
 //(c) A+ Computer Science
 //www.apluscompsci.com
 
-//Name -
-//Date -
-//Class -
-//Lab  -
+//Name - Carolyn Cui
+//Date - 2/5/20
+//Class - AP CS A
+//Lab  - Distance / Runner
 
 import java.util.Scanner; 
 import static java.lang.System.*;
