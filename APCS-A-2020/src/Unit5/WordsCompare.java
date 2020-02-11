@@ -1,10 +1,11 @@
+package Unit5;
 //(c) A+ Computer Science
 //www.apluscompsci.com
 
-//Name -
-//Date -
-//Class -
-//Lab  -
+//Name - Carolyn Cui
+//Date - 2/11/20
+//Class - AP CS A
+//Lab  - WordsCompare/Dictionary
 
 import static java.lang.System.*;
 
@@ -15,19 +16,29 @@ public class WordsCompare
 
 	public WordsCompare()
 	{
+		setWords("a","b");
+		wordOne = "a";
+		wordTwo = "b";
+		compare = 1;
 	}
 
 	public WordsCompare(String one, String two)
 	{
+		setWords(one, two);
+		wordOne = "a";
+		wordTwo = "b";
+		compare = 1;
 	}
 
 	public void setWords(String one, String two)
 	{
-
+		wordOne = one;
+		wordTwo = two;
 	}
 
 	public void compare()
 	{
+		compare = wordOne.compareTo(wordTwo);
 	}
 
 	public String toString()

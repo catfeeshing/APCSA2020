@@ -9,14 +9,24 @@ public class FirstLastVowel
 {
    public static String go( String a )
 	{
-	   String firstLetter = a.toLowerCase(a.substring(0));
-	   String lastLetter = a.toLowerCase(a.substring(a.length() - 1));
+	   String firstLetter = (a.substring(0,1));
+	   String lastLetter = (a.substring(a.length() - 1));
 	   
-	   if ((firstLetter.equals("a") || firstLetter.equals("e") || firstLetter.equals("i") || firstLetter.equals("o") || firstLetter.equals("u")) || (lastLetter.equals("a") || lastLetter.equals("e") || lastLetter.equals("i") || lastLetter.equals("o") || lastLetter.equals("u"))) {
+	   String first = firstLetter.toLowerCase();
+	   String last = lastLetter.toLowerCase();
+	   
+	   // this was for testing what was being compared
+	   // System.out.println("\n\n" + firstLetter);
+	   // System.out.println(lastLetter + "\n\n");
+	   
+	   if (first.equals("a") || first.equals("e") || first.equals("i") || first.equals("o") || first.equals("u")) {
 		   return "yes";
 	   }
-	   return "no";
+	   else if (last.equals("a") || last.equals("e") || last.equals("i") || last.equals("o") || last.equals("u")) {
+		   return "yes";
+	   }
+	   else {
+		   return "no";
+	   }
 	}
 }
-
-//(a.charAt(0) "a" || "e" || "i" || "o" || "u")
