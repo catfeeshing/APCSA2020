@@ -1,3 +1,4 @@
+package Unit6;
 //(c) A+ Computer Science
 //www.apluscompsci.com
 //Name -
@@ -11,7 +12,9 @@ public class LetterRemover
 
 	public LetterRemover()
 	{
-		//call set
+		setRemover("abc", 'a');
+		sentence = "abc";
+		lookFor = 'a';
 	}
 
 	//add in second constructor
@@ -25,7 +28,13 @@ public class LetterRemover
 
 	public String removeLetters()
 	{
-		String cleaned=sentence;
+		for (int i = 0; i < sentence.length()-1; i++) {
+			if (sentence.charAt(i) == lookFor) {
+				sentence.replace(lookFor+"", "");
+			}
+		}
+		
+		String cleaned = sentence;
 		return cleaned;
 	}
 
