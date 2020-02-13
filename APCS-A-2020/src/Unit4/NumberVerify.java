@@ -1,5 +1,6 @@
 package Unit4;
 //(c) A+ Computer Science
+
 //www.apluscompsci.com
 
 //Name -
@@ -9,22 +10,21 @@ package Unit4;
 
 import static java.lang.System.*;
 
-public class NumberVerify
-{
-	public static boolean isOdd( int num ) {
+public class NumberVerify {
+	public static boolean isOdd(int num) {
 		if (Math.abs(num) % 2 == 1) {
-		return true;
+			return true;
 		}
-		
+
 		return false;
 	}
 
-	public static boolean isEven( int num ) {
+	public static boolean isEven(int num) {
 		if (Math.abs(num) % 2 == 0) {
-		return true;
+			return true;
 		}
-		
+
 		return false;
 	}
-	
+
 }
