@@ -142,47 +142,58 @@ public class Review {
 	 * Activity 2: totalSentiment() Write the code to total up the sentimentVals of
 	 * each word in a review.
 	 */
+	
 	public static double totalSentiment(String filename) {
 		// read in the file contents into a string using the textToString method with
 		// the filename
-		String words = textToString("src/ConsumerLab/cleanSentiment.csv");
+		
+		String words = textToString(filename);
 
 		// set up a sentimentTotal variable
 
 		double sentimentTotal = 0;
-		String s = " ";
 		
 		// loop through the file contents
-
-		while (words.indexOf(" ") >= 0) {
-			int i = words.indexOf(" ");
-			s = s + words.substring(0,i);
-			
+		
+		while (words.length() > 0) {
+			space = words.indexOf(" ");
+			if (space > 0) {
+				sentimentTotal += sentimentVal(words.substring(0, space));
+				words = words.replace(words.substring(0,space+1), "");
+				space = words.indexOf(" ");
+			}
+			else {
+				sentimentTotal += sentimentVal(words.substring(0));
+				break;
+			}
 		}
-		
-		
-		// find each word
-		
-		
-		
-		// add in its sentimentVal
-		// set the file contents to start after this word
-
-		return sentimentTotal;
 	}
 
 	/**
 	 * Activity 2 starRating method Write the starRating method here which returns
 	 * the number of stars for the review based on its totalSentiment.
 	 */
-	public static int starRating(String filename) {
-		// call the totalSentiment method with the fileName
+	
+  	public static int starRating(String filename) {
 
-		// determine number of stars between 0 and 4 based on totalSentiment value
-		int stars;
-		// write if statements here
-
-		// return number of stars
-		return stars;
-	}
-}
+		double totalSent = totalSentiment(filename);
+	
+		int stars = 0;
+		
+ 	  	if (totalSentiment >= 15) {
+    			stars = 4;
+    	  	} 
+	  	else if (totalSentiment > 10) {
+    			stars = 3;
+    	  	}
+	  	else if (totalSentiment > 5) {
+    			stars = 2;
+    	  	}
+	  	else if (totalSentiment > 0) {
+    			stars = 1;
+	  	} 
+	  	else {
+    			stars = 0;
+    		}
+  		return stars; 
+ 	}
