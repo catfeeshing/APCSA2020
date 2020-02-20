@@ -164,9 +164,9 @@ public class Review {
 			}
 			else {
 				sentimentTotal += sentimentVal(words.substring(0));
-				break;
 			}
 		}
+		return sentimentTotal;
 	}
 
 	/**
@@ -180,16 +180,16 @@ public class Review {
 	
 		int stars = 0;
 		
- 	  	if (totalSentiment >= 15) {
+ 	  	if (totalSent >= 15) {
     			stars = 4;
     	  	} 
-	  	else if (totalSentiment > 10) {
+	  	else if (totalSent > 10) {
     			stars = 3;
     	  	}
-	  	else if (totalSentiment > 5) {
+	  	else if (totalSent > 5) {
     			stars = 2;
     	  	}
-	  	else if (totalSentiment > 0) {
+	  	else if (totalSent > 0) {
     			stars = 1;
 	  	} 
 	  	else {
@@ -197,3 +197,4 @@ public class Review {
     		}
   		return stars; 
  	}
+}
