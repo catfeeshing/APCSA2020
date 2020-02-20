@@ -1,3 +1,4 @@
+package Unit7;
 //(c) A+ Computer Science
 // www.apluscompsci.com
 //Name -  
@@ -20,7 +21,11 @@ public class RPSRunner
 			
 			//read in the player value
 		
-			RockPaperScissors game = new RockPaperScissors();		
+			RockPaperScissors game = new RockPaperScissors();
+			player = keyboard.nextLine();
+			game.setPlayers(player);
+			//game.determineWinner();
+			System.out.println(game);
 	}
 }
 
