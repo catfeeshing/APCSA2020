@@ -156,7 +156,7 @@ public class Review {
 		// loop through the file contents
 		
 		while (words.length() > 0) {
-			space = words.indexOf(" ");
+			int space = words.indexOf(" ");
 			if (space > 0) {
 				sentimentTotal += sentimentVal(words.substring(0, space));
 				words = words.replace(words.substring(0,space+1), "");
