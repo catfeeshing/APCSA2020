@@ -21,6 +21,11 @@ public class TriangleFive
 		setLetter(c);
 		setAmount(amt);
 	}
+	
+	public void setVals(char c, int amt) {
+		letter = c;
+		amount = amt;
+	}
 
 	public void setLetter(char c)
 	{
@@ -37,6 +42,38 @@ public class TriangleFive
 		
 		// starting rows = amt, letter = starting character. total haraters looped = amt
 		// rows decreases by one and next letter
+		
+		int amtOne = amount;
+		int amtTwo = amount;
+		char newLetter = letter;
+		
+		for (int a = amount; a > 0; a--) {
+			
+			for (int b = amtOne; b > 0; b--) {
+				
+				for (int c = amtTwo; c > 0; c--) {
+					System.out.print(newLetter);
+				}
+				
+				amtTwo = amtTwo - 1;
+				
+				newLetter = (char)(newLetter + 1);
+				if (newLetter == '[') {
+					newLetter = 'A';
+				}
+				System.out.print(" ");
+			
+			}
+			
+			newLetter = letter;
+			amtTwo = amount;
+			amtOne = amtOne - 1;
+			
+			System.out.println("");
+			//System.out.print(letter);
+			
+			
+		}
 		
 		// below is bad, prints vertically, stop \n'ing
 		
