@@ -27,6 +27,7 @@ class Deck {
 			//loop through all faces 1 to 13
 			for (int j = 1; j <= 13; j++) {
 				cards.add(new Card(SUITS[i], j)); // creates new card per each loop
+				System.out.println(cards);
 			}
 		}
 	}
@@ -39,6 +40,9 @@ class Deck {
 	}
    
    //write a shuffle() method
+	public Card shuffle() {
+		Collections.shuffle()
+	}
    	//use Colletions.shuffle
    	//reset the top card 
 }
