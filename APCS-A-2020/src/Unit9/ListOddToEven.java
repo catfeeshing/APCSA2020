@@ -29,6 +29,7 @@ public class ListOddToEven
 				if (ray.get(j)%2 == 0) {
 					lastEven = ray.get(j);
 					evenExists = true;
+					break;
 				}
 			}
 			System.out.println(ray.indexOf(lastEven));
