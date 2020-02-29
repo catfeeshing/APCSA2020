@@ -6,7 +6,7 @@ import java.util.List;
 
 //(c) A+ Computer Science
 //www.apluscompsci.com
-//Name -
+//Name - Carolyn Cui
 //Date -
 
 public class OddToEvenRunner
