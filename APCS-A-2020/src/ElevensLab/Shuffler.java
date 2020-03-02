@@ -1,3 +1,4 @@
+package ElevensLab;
 /**
  * This class provides a convenient way to test shuffling methods.
  */
@@ -61,6 +62,17 @@ public class Shuffler {
 	 */
 	public static void perfectShuffle(int[] values) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 3 *** */
+		int[] shuffled = new int[52];
+		int k = 0;
+		for (int j = 0; j <= 25; j++) {
+			shuffled[j] = values[j];
+			k = k+2;
+		}
+		k = 1;
+		for (int j = 26; j <= 51; j++) {
+			shuffled[j] = values[j];
+			k = k+2;
+		}
 	}
 
 	/**
@@ -76,5 +88,11 @@ public class Shuffler {
 	 */
 	public static void selectionShuffle(int[] values) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 3 *** */
+		int[] shuffled = new int[52];
+		for (int k = 0; k <= 51; k++) {
+			int j = (int) (Math.random()*52);
+			if (values[j] )
+			shuffled[j] = values[j];
+		}
 	}
 }

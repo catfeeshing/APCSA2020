@@ -15,6 +15,7 @@ class Deck {
 	
 	private List<Card> cards;
 	private int top;
+	private int size;
 
    //make a Deck constructor
 	public Deck() {
@@ -30,19 +31,55 @@ class Deck {
 				System.out.println(cards);
 			}
 		}
+		size = cards.size();
+		top = size-1;
+		// shuffle method
+	}
+	
+	public Deck(String[] ranks, String[] suits, int[] pointValue) {
+		cards = new ArrayList<Card>();
+		for (int i = 0; i < suits.length; i++) {
+			for (int j = 0; j < ranks.length; j++) {
+				cards.add(new Card(ranks[i], suits[j], pointValue[i]));
+			}
+		}
+		size = cards.size();
+		top = size-1;
+		//shuffle()
 	}
    			//add a new TwentyOneCard to the deck
 
    
    //make a dealCard() method that returns the top card
 	public Card dealCard() {
-		return cards.get(top);
+		Card topCard;
+		if(!isEmpty(cards)) {
+			topCard = cards.get(top);
+		}
+		else {
+			return new Card();
+		}
+		
+		top--;
+		size--;
+		
+		return topCard;
+	}
+	
+	public boolean isEmpty(List<Card> checkCards) { // is the deck empty
+		return size <= 0;
 	}
    
-   //write a shuffle() method
-	public Card shuffle() {
-		Collections.shuffle()
-	}
+   // Collections shuffle method to shuffle the deck.
+	public void shuffle() {
    	//use Colletions.shuffle
-   	//reset the top card 
+		Collections.shuffle(cards);
+	}
+	
+	
+	// Reset the deck.
+	public void topReset() {
+		size = cards.size();
+		top = size-1;
+	}
 }

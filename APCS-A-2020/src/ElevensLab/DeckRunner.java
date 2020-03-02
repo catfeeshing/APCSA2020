@@ -11,11 +11,34 @@ public class DeckRunner
 	{
 		Deck test = new Deck();
 		
+		// - - - - - Print entire deck in order: OK
+		
 		System.out.println( "All cards in order." );
 		for( int j = 1; j <= 52; j++ )
 		{
 			System.out.println( test.dealCard() );
 		}
+		
+		test.shuffle();
+		test.topReset();
+		
+		// - - - - - Print single random card: OK
+		
+		System.out.println("new");
+		System.out.println(test.dealCard() + "end");
+		
+		// - - - - - Shuffle method test: OK
+		
+		/* test.topReset();
+		test.shuffle();
+		
+		for( int j = 1; j <= 52; j++ )
+		{
+			System.out.println( test.dealCard() );
+		}
+		*/
+		
+		// - - - - -
 		
 		//test.shuffle();	
 		

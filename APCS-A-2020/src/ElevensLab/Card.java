@@ -29,7 +29,11 @@ public class Card
 		pointValue = cardPointValue;
 	}
 
-	// modifiers
+	public Card() {
+		// TODO Auto-generated constructor stub
+	}
+
+		// modifiers
 		//set methods
 		public void setCards(String cardSuit, int cardFace) {
 			suit = cardSuit;
@@ -62,6 +66,9 @@ public class Card
 		public String getRank() {
 			return rank;
 		}
+		public int getPointVal() {
+			return pointValue;
+		}
 
 
   	//toString
@@ -75,6 +82,15 @@ public class Card
 			
 			
 			//return FACES[face] + " of " + suit + "\n" + rank + " of " + suit + " (point value = " + pointValue + " ) \n\n";
+		}
+		
+		public boolean match(Card aCard) {
+			if(this.getSuit().equals(aCard) && this.getRank().equals(aCard) && this.getPointVal() == aCard.getPointVal()) {
+				return true;
+			}
+			else {
+				return false;
+			}
 		}
 
  }
