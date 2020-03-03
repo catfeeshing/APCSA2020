@@ -29,9 +29,21 @@ public class DeckRunner
 		
 		// - - - - - Shuffle method test: OK
 		
-		/* test.topReset();
+		test.topReset();
 		test.shuffle();
 		
+		// - - - - - PerfectShuffle test:
+		
+		/*
+		int[] arr = {1,2,3,4,5};
+		System.out.println(arr.toString());
+		Shuffler.perfectShuffle(arr);
+		System.out.println(arr.toString());
+		*/
+	
+		// - - - - - SelectionShuffle test:
+		
+		/*
 		for( int j = 1; j <= 52; j++ )
 		{
 			System.out.println( test.dealCard() );

@@ -1,4 +1,7 @@
 package ElevensLab;
+
+import java.util.Arrays;
+
 /**
  * This class provides a convenient way to test shuffling methods.
  */
@@ -8,12 +11,12 @@ public class Shuffler {
 	 * The number of consecutive shuffle steps to be performed in each call
 	 * to each sorting procedure.
 	 */
-	private static final int SHUFFLE_COUNT = 1;
+	private static final int SHUFFLE_COUNT = 2;
 
 	/**
 	 * The number of values to shuffle.
 	 */
-	private static final int VALUE_COUNT = 4;
+	private static final int VALUE_COUNT = 52;
 
 	/**
 	 * Tests shuffling methods.
@@ -51,6 +54,11 @@ public class Shuffler {
 			System.out.println();
 		}
 		System.out.println();
+		
+		System.out.println(weightedCoin());
+		int[] arrayOne = {87,3434,1};
+		int[] arrayTwo = {1,3434,87};
+		System.out.println(arePermutations(arrayOne, arrayTwo));
 	}
 
 
@@ -62,15 +70,25 @@ public class Shuffler {
 	 */
 	public static void perfectShuffle(int[] values) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 3 *** */
-		int[] shuffled = new int[52];
+		
+		// Initialize shuffled to contain 52 empty elements.
+		int[] shuffled = new int[VALUE_COUNT];
+		
+		
+		// Set k to 0.
 		int k = 0;
+		
+		// For j = 0 to 25:
 		for (int j = 0; j <= 25; j++) {
-			shuffled[j] = values[j];
+			// Copy cards[j] to shuffled[k]
+			shuffled[k] = values[j];
+			// Set k to k+2
 			k = k+2;
 		}
+		//Set k to 1.
 		k = 1;
 		for (int j = 26; j <= 51; j++) {
-			shuffled[j] = values[j];
+			shuffled[k] = values[j];
 			k = k+2;
 		}
 	}
@@ -88,11 +106,77 @@ public class Shuffler {
 	 */
 	public static void selectionShuffle(int[] values) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 3 *** */
-		int[] shuffled = new int[52];
-		for (int k = 0; k <= 51; k++) {
-			int j = (int) (Math.random()*52);
-			if (values[j] )
-			shuffled[j] = values[j];
+		//int[] shuffled = new int[52];
+		for (int k = 51; k <= 1; k--) {
+			int r = (int) (Math.random()*k);
+			values[k] = values[r];
 		}
+	}
+	
+	// Weighted Coin Simulation
+	public static String weightedCoin() {
+		int num = (int) (Math.random()*3);
+		if (num == 2) {
+			return "tails";
+		}
+		return "heads";
+	}
+	
+	// arePermutations to test for permutations
+	public static boolean arePermutations(int[] arrayOne, int[] arrayTwo) {
+		int[] arrOne = new int[arrayOne.length];
+		for (int i = 0; i < arrayOne.length; i++ ) {
+			arrOne[i] = arrayOne[i];
+		}
+		
+		int[] arrTwo = new int[arrayTwo.length];
+		for (int i = 0; i < arrayTwo.length; i++) {
+			arrTwo[i] = arrayTwo[i];
+		}
+	
+		
+		/*
+		Arrays.sort(arrOne);
+		Arrays.sort(arrTwo);
+		*/
+		int arrOneLength = arrOne.length;
+		for (int i = 0; i < arrOneLength-1; i++) {
+			int min = i;
+			for (int j = i + 1; j < arrOneLength; j++) {
+				if (arrOne[j] < arrOne[min]) {
+					min = j;
+					
+					int temp = arrOne[min];
+					arrOne[min] = arrOne[i];
+					arrOne[i] = temp;
+				}
+			}
+		}
+		
+		int arrTwoLength = arrTwo.length;
+		for (int i = 0; i < arrTwoLength-1; i++) {
+			int min = i;
+			for (int j = i + 1; j < arrTwoLength; j++) {
+				if (arrTwo[j] < arrTwo[min]) {
+					min = j;
+					
+					int temp = arrTwo[min];
+					arrTwo[min] = arrTwo[i];
+					arrTwo[i] = temp;
+				}
+			}
+		}
+		
+		
+		int count = 0;
+		for (int i = 0; i < arrOne.length; i++) {
+			if (arrOne[i] == arrTwo[i]) {
+				count++;
+			}
+		}
+		if (count == arrOne.length) {
+			return true;
+		}
+		return false;
 	}
 }
