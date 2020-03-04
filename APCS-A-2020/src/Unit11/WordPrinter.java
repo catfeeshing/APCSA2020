@@ -1,3 +1,4 @@
+package Unit11;
 //(c) A+ Computer Science
 //www.apluscompsci.com
 //Name -
@@ -10,5 +11,12 @@ public class WordPrinter
 		
 	public static void printWord(String word, int times)
 	{
+		String w = word;
+		int x = times;
+		
+		for (int i = 0; i <= x; i++) {
+			System.out.println(word);
+		}
+		System.out.println("")
 	}
 }
