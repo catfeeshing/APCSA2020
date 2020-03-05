@@ -12,7 +12,7 @@ public class TriangleWord
 		
 	public static void printTriangle(String word)
 	{
-		int num = 1;
+		int num = 0;
 		//char[] letters = word.toCharArray();
 		for (int i = 0; i <= word.length()-1; i++) {
 			for (int a = i; a<=word.length()-1; a++) {
