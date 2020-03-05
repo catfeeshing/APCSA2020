@@ -19,7 +19,9 @@ public class TriangleWord
 				for (int j = 0; j <= word.length()-1; j++) {
 				System.out.print(word.substring(0,num));
 				}
-			num++;
+			if (num < word.length()) {
+				num++;
+			}
 			System.out.println("");
 			
 			
