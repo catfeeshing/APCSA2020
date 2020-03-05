@@ -17,6 +17,7 @@ public class WordPrinter
 		for (int i = 0; i <= x; i++) {
 			System.out.println(word);
 		}
-		System.out.println("")
+		System.out.println("");
+		if ()
 	}
 }
