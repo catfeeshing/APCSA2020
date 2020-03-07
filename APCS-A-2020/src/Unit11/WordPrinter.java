@@ -14,10 +14,8 @@ public class WordPrinter
 		String w = word;
 		int x = times;
 		
-		for (int i = 0; i <= x; i++) {
+		for (int i = 0; i < x; i++) {
 			System.out.println(word);
 		}
-		System.out.println("");
-		if ()
 	}
 }

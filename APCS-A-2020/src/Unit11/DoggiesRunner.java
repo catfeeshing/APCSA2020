@@ -1,3 +1,4 @@
+package Unit11;
 //(c) A+ Computer Science
 //www.apluscompsci.com
 //Name -
@@ -7,7 +8,7 @@ import java.util.Scanner;
 
 public class DoggiesRunner
 {
-   public static void main( String[] args )
+   public static void main(String[] args )
    {
 		Scanner keyboard = new Scanner(System.in);
 		

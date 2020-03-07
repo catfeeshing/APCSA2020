@@ -10,6 +10,19 @@ public class TriangleWordRunner
 {
 	public static void main( String args[] )
 	{
-		TriangleWord.printTriangle("cat");
+		// this was a test TriangleWord.printTriangle("cat");
+		
+		String ans = "y";
+		
+		Scanner input = new Scanner(System.in);
+		
+		while(ans.equals("y")) {
+			System.out.print("Enter a word :: ");
+			String word = input.next();
+			TriangleWord.printTriangle(word);
+			System.out.print("\nDo you want to enter more sample input? ");
+			ans = input.next();
+			System.out.println("");
+		}
 	}
 }

@@ -12,6 +12,18 @@ public class TriangleWord
 		
 	public static void printTriangle(String word)
 	{
+		
+		int len = word.length();
+		String w = "";
+		for(int i = 1; i<= len; i++) {
+			for(int j = 1; j <= i; j++) {
+				w = word.substring(0,i);
+				System.out.print(w);
+			}
+			System.out.println("");
+		}
+		
+		/*
 		int num = 0;
 		//char[] letters = word.toCharArray();
 		for (int i = 0; i <= word.length()-1; i++) {
@@ -23,6 +35,7 @@ public class TriangleWord
 				num++;
 			}
 			System.out.println("");
+			*/
 			
 			
 			
@@ -35,7 +48,5 @@ public class TriangleWord
 			}
 			*/
 			}
-			}
 		
 	}
-}

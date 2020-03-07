@@ -20,7 +20,7 @@ import java.util.List;
 public class MovingShapePanel extends JPanel implements Runnable
 {
 	private Shape sh;
-	private List<Shape> s;
+	//private List<Shape> s;
 
 	public MovingShapePanel()
 	{
@@ -29,9 +29,9 @@ public class MovingShapePanel extends JPanel implements Runnable
 
 		//refer sh to a new Shape
 		sh = new Shape(50,50,10,10,Color.BLACK,1,1);
-		Shape bShape = new Shape(50,50,100,10,Color.CYAN,3,3);
-		s.add(sh);
-		s.add(bShape);
+		//Shape bShape = new Shape(50,50,100,10,Color.CYAN,3,3);
+		//s.add(sh);
+		//s.add(bShape);
 
 
 		new Thread(this).start();
