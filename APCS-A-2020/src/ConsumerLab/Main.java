@@ -11,9 +11,9 @@ class Main {
 		//printy print
 		System.out.println(Review.totalSentiment("src/ConsumerLab/simpleReview.txt"));
 		System.out.println(Review.starRating("src/ConsumerLab/simpleReview.txt"));
-		System.out.println(Review.fakeReview("src/ConsumerLab/simpleReview.txt"));
-		System.out.println(Review.positiveReview("src/ConsumerLab/simpleReview.txt"));
-		System.out.println(Review.negativeReview("src/ConsumerLab/simpleReview.txt"));
+		//System.out.println(Review.fakeReview("src/ConsumerLab/simpleReview.txt"));
+		//System.out.println(Review.positiveReview("src/ConsumerLab/simpleReview.txt"));
+		//System.out.println(Review.negativeReview("src/ConsumerLab/simpleReview.txt"));
 		// read in the positive adjectives in postiveAdjectives.txt
 		//? is this the intention System.out.println(Review.totalSentiment("src/ConsumerLab/positiveAdjectives.txt"));
 		try {
