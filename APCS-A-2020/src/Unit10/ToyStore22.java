@@ -9,11 +9,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import static java.lang.System.*;
 
-public class ToyStore
+public class ToyStore22
 {
 	private ArrayList<Toy> toyList;
 
-	public ToyStore()
+	public ToyStore22()
 	{
 		toyList = new ArrayList<Toy>();
 	}
@@ -72,4 +72,8 @@ public class ToyStore
 	   return toyList + ""
 	   		+ "nmax == " + getMostFrequentToy();
 	}
+	
+	public void myName(){
+		System.out.println("Carolyn Cui");
+		}
 }

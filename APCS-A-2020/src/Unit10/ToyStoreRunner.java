@@ -12,7 +12,7 @@ public class ToyStoreRunner
 {
 	public static void main( String args[] )
 	{
-		ToyStore toy = new ToyStore();
+		ToyStore22 toy = new ToyStore22();
 		toy.loadToys("sorry bat sorry sorry sorry train train teddy teddy ball ball");
 		toy.sortToysByCount(); // sort toys
 		System.out.println(toy);
