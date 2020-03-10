@@ -39,7 +39,7 @@ public class StartPanel extends JPanel
 	/**
 	 * RadioButton for the default type.
 	 */
-	private JRadioButton celebrityRadio;
+	private JRadioButton celebrityRadio; // RADIO BUTTONS: can only select one at a time
 
 	/**
 	 * RadioButton for the Celebrity type.
@@ -136,7 +136,7 @@ public class StartPanel extends JPanel
 
 		setupPanel();
 		setupLayout();
-		setupListeners();
+		setupListeners(); // contacting sys to confirm if you've done smth
 	}
 
 	/**

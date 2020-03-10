@@ -14,25 +14,26 @@ public class CelebrityGame
 	 * A reference to a Celebrity or subclass instance.
 	 */
 	
-	private Celebrity gameCeleb = new Celebrity("a","a");
+	//private Celebrity gameCeleb = new Celebrity("a","a");
 
 	/**
 	 * The GUI frame for the Celebrity game.
 	 */
-	
+	CelebrityFrame gameWindow = new CelebrityFrame(this);
 
 	/**
 	 * The ArrayList of Celebrity values that make up the game
 	 */
 	
-	private List<Celebrity> celebGameList = new ArrayList <Celebrity>();
+	private List<Celebrity> celebGameList;
+	public Celebrity gameCelebrity;
 	
 	/**
 	 * Builds the game and starts the GUI
 	 */
 	public CelebrityGame()
 	{
-		
+		celebGameList = new ArrayList <Celebrity>();
 	}
 
 	/**
@@ -40,7 +41,8 @@ public class CelebrityGame
 	 */
 	public void prepareGame()
 	{
-		List<Celebrity> celebGameList = new ArrayList <Celebrity>();
+		celebGameList = new ArrayList <Celebrity>();
+		gameWindow.replaceScreen("START");
 	}
 
 	/**
@@ -53,14 +55,13 @@ public class CelebrityGame
 	 */
 	public boolean processGuess(String guess)
 	{
-		/*
 		String g = guess.toLowerCase();
-		if (g == celebGameList.get(0).getAnswer()) {
+		if (g.trim().equalsIgnoreCase(celebGameList.get(0).getAnswer())) {
+			celebGameList.remove(celebGameList.get(0));
 			return true;
 		}
 		return false;
-		*/
-		return false;
+		
 	}
 
 	/**
@@ -70,7 +71,10 @@ public class CelebrityGame
 	 */
 	public void play()
 	{
-		
+		if (celebGameList != null && celebGameList.size() > 0) {
+			this.gameCelebrity = celebGameList.get(0);
+			gameWindow.replaceScreen("GAME");
+		}
 	}
 
 	/**
@@ -85,7 +89,8 @@ public class CelebrityGame
 	 */
 	public void addCelebrity(String name, String guess, String type)
 	{
-		
+		Celebrity newCeleb = new Celebrity(name, guess);
+		celebGameList.add(newCeleb);
 	}
 
 	/**
@@ -95,6 +100,10 @@ public class CelebrityGame
 	 */
 	public boolean validateCelebrity(String name)
 	{
+		String celeb = name.trim();
+		if (celeb.length() >= 4) {
+			return true;
+		}
 		return false;
 	}
 
@@ -107,6 +116,10 @@ public class CelebrityGame
 	 */
 	public boolean validateClue(String clue, String type)
 	{
+		String celebClue = clue.trim();
+		if (celebClue.length() >= 10) {
+			return true;
+		}
 		return false;
 	}
 
@@ -117,7 +130,7 @@ public class CelebrityGame
 	 */
 	public int getCelebrityGameSize()
 	{
-		return 0;
+		return celebGameList.size();
 	}
 
 	/**

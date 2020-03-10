@@ -44,7 +44,7 @@ public class Celebrity
 	 */
 	public String getAnswer()
 	{
-		return name;
+		return name.trim();
 	}
 
 	/**

@@ -12,8 +12,14 @@ public class CelebrityRunner
 	 */
 	public static void main(String [] args)
 	{
+		/*
 		Celebrity celeb = new Celebrity("Bob","The Builder");
 		System.out.println(celeb);
 		System.out.println(celeb.getClue());
+		*/
+		//CelebrityRunner run = new CelebrityRunner();
+		
+		CelebrityGame game = new CelebrityGame();
+		game.play();
 	}
 }
