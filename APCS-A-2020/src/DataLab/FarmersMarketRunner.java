@@ -7,7 +7,7 @@ import core.data.*;
 public class FarmersMarketRunner {
    public static void main(String[] args) {
 	   DataSource ds = DataSource.connect("https://data.baltimorecity.gov/api/views/atzp-3tnt/rows.xml").load();
-	   ds.printUsageString();
+	   //ds.printUsageString();
 	      ArrayList<FarmersMarket> allMarkets = ds.fetchList(FarmersMarket.class, "row/row/name", "row/row/day_", "row/row/monthsopen", 
 	    		  "row/row/monthsclose", "row/row/openingtime", "row/row/closingtime", "row/row/numberofvendors");
 	      
@@ -24,7 +24,7 @@ public class FarmersMarketRunner {
 	         //}
 	      }
 	      System.out.println("How many farmers markets open on openNine at 9:00am in Baltimore? ");
-	      System.out.println(openNine.size() + " farmers markets open on openNine at 9:00am. They are: " + openNine);
+	      System.out.println(openNine.size() + " farmers markets open at 9:00am. They are: " + openNine);
 	      
 	      System.out.println("\nThese are all the farmers markets in Baltimore!");
 	      for(FarmersMarket fm : allMarkets) {
