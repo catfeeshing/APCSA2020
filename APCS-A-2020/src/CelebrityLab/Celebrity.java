@@ -18,7 +18,10 @@ public class Celebrity
 	
 	private String name;
 	
+	private String type;
+	
 	/**
+	 * 
 	 * Creates a Celebrity instance with the supplied answer and clue
 	 * @param answer
 	 * @param clue
@@ -27,6 +30,12 @@ public class Celebrity
 	{
 		setAnswer(answer);
 		setClue(clue);
+	}
+	
+	public Celebrity(String answer, String clue, String celebType) {
+		setAnswer(answer);
+		setClue(clue);
+		setType(celebType);
 	}
 
 	/**
@@ -63,6 +72,14 @@ public class Celebrity
 	public void setAnswer(String answer)
 	{
 		name = answer;
+	}
+	
+	public void setType(String celebType) {
+		type = celebType;
+	}
+	
+	public String getType() {
+		return type;
 	}
 	
 	/**

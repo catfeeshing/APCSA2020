@@ -20,6 +20,5 @@ public class CelebrityRunner
 		//CelebrityRunner run = new CelebrityRunner();
 		
 		CelebrityGame game = new CelebrityGame();
-		game.play();
 	}
 }

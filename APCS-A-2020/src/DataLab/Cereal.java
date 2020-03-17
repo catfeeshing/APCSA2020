@@ -167,6 +167,6 @@ public class Cereal {
 	
 	// toString
 	public String toString() {
-		return this.name + " is type " + type + " and has " + calories + " calories, ";
+		return this.name + " is type " + type + " and has " + calories + " calories, " + protein + " grams of protein.";
 	}
 }
